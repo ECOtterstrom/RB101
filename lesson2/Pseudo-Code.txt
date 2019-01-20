@@ -1,0 +1,104 @@
+	Write pseudo-code for the following three methods:
+	
+	1.	a method that returns the sum of two numbers
+		 
+			input - two integers
+			output - one integer
+			rules - combine the two integers into one integer through addition
+		 
+			test cases
+				0 + 1 = 1
+				1 + 2 = 3
+				9 + 10 = 19
+				101 + 302 = 403
+		 
+			data structure
+				x + y = z
+		 
+			pseudo-code
+		 
+			START
+			
+				GET integer1
+				GET integer2
+				
+				integer1 + integer2 = result
+				
+				PRINT result
+			
+			END
+	
+	
+	2.	a method that takes an array of strings, and returns a string that is
+			all of those strings concatenated together
+			
+			input -	an array of strings 
+			output - a single string
+			rule - concatenate all of the strings in the array
+			
+			test cases
+			['one', 'two', 'three', 'four'] => 'onetwothreefour'
+			['blue', 'green', 'yellow'] => 'bluegreenyellow'
+			['zip', 'froggy', 'the', 'rain'] => 'zipfroggytherain'
+			
+			data structure
+			['abc', 'defg', 'hi', 'jkl',  ... string_n] => 'abcdefghijkl...string_n'
+			
+			pseudo-code
+			
+			START
+			
+			SET a variable equal to an array of strings
+			Iterate over the array of strings
+			Select the first string
+			Concatenate the second string to the first string
+			Concatenate the third string to the combination string
+			Continue until you concatenate string_n to the combination string
+			
+			PRINT the combination string
+			
+			END
+			
+			
+	3. a method that takes an array of integers, and returns a new array with
+	   every other element
+	   
+	   input - an array of integers
+	   output - a new array of integers containing the odd index elements of
+	   the first array
+	   rule - divide the index of each integer in the original array by two; 
+	   if the remainder is greater than 0, the integer has an odd index number
+	   and should be included in the new array
+	   
+	   test cases
+	   [1, 0, 6, 17, 3, 4] => [0, 17, 4]
+	   [0, 1, 0, 2, 0, 3, 0] => [1, 2, 3]
+	   [2, 1, 3, 1, 4, 1, 5, 1] => [1, 1, 1, 1]
+	   
+	   data structure
+	   [a, b, c, d, ...n]  => [b, d, ...(n-1)]
+	   
+	   pseudo-code
+	   
+	   START
+	   
+	   SET a variable equal to an array of integers
+	   Iterate over the array of integers with index
+	   Divide the index of each integer in the original array by two
+	   If the remainder is greater than zero, include the value in
+	     the new array
+	   Continue for each value of the original array
+	   
+	   PRINT the new array
+	   
+	   END
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
