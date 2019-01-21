@@ -1,0 +1,25 @@
+# doc_ex2.txt
+
+Optional Arguments Redux
+
+Assume you have the following code:
+
+require 'date'
+
+puts Date.new 
+puts Date.new(2016)
+puts Date.new(2016, 5)
+puts Date.new(2016, 5, 13)
+What will each of the 4 puts statements print?
+
+documentation found at: 
+https://ruby-doc.org/stdlib-2.4.1/libdoc/date/rdoc/Date.html
+
+1. puts Date.new              => -4712-01-01
+2. puts Date.new(2016)        => 2016-01-01
+3. puts Date.new(2016, 5)     => 2016-05-01
+4. puts Date.new(2016, 5, 13) => 2016-05-13
+
+dates always return as nil
+
+

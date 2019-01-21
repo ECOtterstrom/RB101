@@ -1,0 +1,16 @@
+# doc_ex6.txt
+
+Keyword Arguments
+
+What does this code print?
+
+5.step(to: 10, by: 3) { |value| puts value }
+
+Documentation for the Numeric #step method is at:
+https://ruby-doc.org/core-2.4.1/Numeric.html#method-i-step
+
+5.step(to: 10, by: 3) { |value| puts value }
+
+will print
+5
+8
