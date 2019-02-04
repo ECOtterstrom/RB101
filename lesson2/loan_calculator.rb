@@ -37,6 +37,7 @@ loop do # main loop
   apr = ''
   loop do
     prompt("Enter the Annual Percentage Rate (APR).")
+    prompt("(Example: 5 for 5% or 2.5 for 2.5%)")
     apr = gets.chomp.to_f
     if valid_number?(apr)
       break
@@ -60,7 +61,7 @@ loop do # main loop
   loan_mon = loan_yr * 12
   mon_pay = loan_amt * (mpr / (1 - ((1 + mpr)**-loan_mon)))
 
-  prompt("The monthly payment is #{mon_pay}")
+  prompt("The monthly payment is #{format('%02.2f', mon_pay)}")
 
   prompt("Do you want to perform another loan calculation?")
   prompt("Enter Y to calculate again.")
@@ -69,3 +70,8 @@ loop do # main loop
 end
 
 prompt("Thank you for using the Loan Calculator. Good bye.")
+
+
+
+
+
