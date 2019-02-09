@@ -1,15 +1,15 @@
 VALID_CHOICES = %w(rock paper scissors spock lizard)
 
 def prompt(message)
-  puts "#{message}"
+  puts("=> #{message}")
 end
 
-WIN_CHOICES= {
-  'scissors'=>['paper', 'lizard'],
-  'paper'=>['rock', 'spock'],
-  'rock'=>['lizard', 'scissors'],
-  'lizard'=>['spock', 'paper'],
-  'spock'=>['scissors', 'rock']
+WIN_CHOICES = {
+  'scissors' => ['paper', 'lizard'],
+  'paper' => ['rock', 'spock'],
+  'rock' => ['lizard', 'scissors'],
+  'lizard' => ['spock', 'paper'],
+  'spock' => ['scissors', 'rock']
 }
 
 CHOICE_CASES = {
@@ -17,7 +17,7 @@ CHOICE_CASES = {
   'p' => 'paper',
   's' => 'scissors',
   'k' => 'spock',
-  'l' => 'lizard',
+  'l' => 'lizard'
 }
 
 def translate_choice(str)
@@ -66,31 +66,28 @@ loop do
 
   if WIN_CHOICES.fetch(choice).include?(computer_choice)
     player_score += 1
-    #prompt("Your score is #{player_score}.")
   elsif WIN_CHOICES.fetch(computer_choice).include?(choice)
-    computer_score +=1
-    #prompt("Computer's score is #{computer_score}.")
-  else 
+    computer_score += 1
+  else
     prompt("Ties are not scored.")
   end
-  
-  prompt("Your score is #{player_score}; the computer's score is #{computer_score}.")
-  
+
+  prompt("Your score is #{player_score};")
+  prompt("the computer's score is #{computer_score}.")
+
   if player_score == 5
-  prompt("You won the match!")
+    prompt("You won the match!")
     break
   elsif computer_score == 5
-    prompt ("The computer won the match!")
+    prompt("The computer won the match!")
     break
   end
 
   prompt("Do you want to play again? (Y or N)")
   answer = gets.chomp
   break unless answer.downcase().start_with?('y')
-  
+
   system('clear') || system('cls')
-  
 end
 
-prompt("Thank you for playing! Good bye.")  
-
+prompt("Thank you for playing! Good bye.")
