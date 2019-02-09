@@ -32,8 +32,8 @@ computer_score = 0
 puts "Let's play Rock, Paper, Scissors, Spock, Lizard!"
 puts""
 prompt("Choose one: #{VALID_CHOICES.join(', ')}")
-prompt("For fast entry, type the first letter of your choice,")
-prompt("or k for spock.")
+prompt("For fast entry, type the first letter of your choice, or k")
+prompt("for Spock. The first player to win 5 rounds wins the match.")
 
 loop do
   choice = ''
@@ -72,8 +72,7 @@ loop do
     prompt("Ties are not scored.")
   end
 
-  prompt("Your score is #{player_score};")
-  prompt("the computer's score is #{computer_score}.")
+  prompt("Player score #{player_score}; computer score: #{computer_score}.")
 
   if player_score == 5
     prompt("You won the match!")
