@@ -17,7 +17,7 @@ end
 p rolling_buffer2([12, 13], 2, 14)
 
 # The difference between the above two methods is that the in 
-# rolling_buffer 1, the Array#<< process is desctructive and 
+# rolling_buffer1, the Array#<< process is desctructive and 
 # permanently changes the buffer array.  The + reassignment method is
 # not destructive, so rolling_buffer2 will not alter the caller's
 # input argument.
